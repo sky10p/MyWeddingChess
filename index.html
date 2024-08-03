@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Clock - Pablo y Elena</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="setup-view" class="view">
+        <div class="header">
+            <h1>Chess Point</h1>
+            <h2>Pablo y Elena</h2>
+        </div>
+        <div class="setup-container">
+            <div class="setup-item">
+                <label for="mode">Modo de juego:</label>
+                <select id="mode">
+                    <option value="2+1">2+1</option>
+                    <option value="3+2">3+2</option>
+                    <option value="10">10 minutos</option>
+                </select>
+            </div>
+            <div class="setup-item">
+                <label for="player1-color">Color Jugador 1:</label>
+                <select id="player1-color">
+                    <option value="white">Blancas</option>
+                    <option value="black">Negras</option>
+                </select>
+            </div>
+            <div class="setup-item">
+                <label for="player2-color">Color Jugador 2:</label>
+                <select id="player2-color">
+                    <option value="black">Negras</option>
+                    <option value="white">Blancas</option>
+                </select>
+            </div>
+            <button onclick="startGame()">Iniciar Juego</button>
+        </div>
+    </div>
+    <div id="clock-view" class="view" style="display: none;">
+        <div id="player2" class="player">
+            <div class="time" id="time2">10:00</div>
+            <button onclick="switchPlayer(2)">Dar reloj</button>
+        </div>
+        <div id="player1" class="player">
+            <div class="time" id="time1">10:00</div>
+            <button onclick="switchPlayer(1)">Dar reloj</button>
+        </div>
+        <button onclick="resetClock()" class="reset-button">Reset</button>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
