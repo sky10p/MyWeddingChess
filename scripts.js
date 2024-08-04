@@ -133,3 +133,39 @@ document.getElementById("player1").addEventListener("click", function () {
 document.getElementById("player2").addEventListener("click", function () {
   switchPlayer(2);
 });
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    var time1 = document.getElementById('time1');
+    var time2 = document.getElementById('time2');
+    time1.addEventListener('selectstart', function(e) {
+        e.preventDefault();
+    }
+    );
+    time2.addEventListener('mousedown', function(e) {
+        e.preventDefault();
+    }
+    );
+    time1.addEventListener('touchstart', function(e) {
+        switchPlayer(1);
+        e.preventDefault();
+    }
+    );
+
+    time2.addEventListener('selectstart', function(e) {
+        e.preventDefault();
+    }
+    );
+
+    time2.addEventListener('mousedown', function(e) {
+        e.preventDefault();
+    }
+    );
+
+    time2.addEventListener('touchstart', function(e) {
+        switchPlayer(2);
+        e.preventDefault();
+    }
+    );
+
+    
+});
