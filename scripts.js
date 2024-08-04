@@ -25,6 +25,21 @@ function formatTime(seconds) {
   return `${min}:${sec < 10 ? "0" : ""}${sec}`;
 }
 
+changeColorWatchPlayer = (player) => {
+  if (player === 1) {
+    document.getElementById("player1").style.backgroundColor = "#f0e68c"; 
+    document.getElementById("player2").style.backgroundColor = ""; 
+    document.getElementById("player1").disabled = true;
+    document.getElementById("player2").disabled = false; 
+  } else {
+    document.getElementById("player2").style.backgroundColor = "#f0e68c";
+    document.getElementById("player1").style.backgroundColor = ""; 
+    document.getElementById("player2").disabled = true; 
+    document.getElementById("player1").disabled = false;
+  }
+};
+
+
 function startGame() {
   const mode = document.getElementById("mode").value;
   let minutes, increment;
@@ -49,8 +64,10 @@ function startGame() {
 
   if (document.getElementById("player1-color").value === "black") {
     activePlayer = 2;
+    changeColorWatchPlayer(1);
   } else {
     activePlayer = 1;
+    changeColorWatchPlayer(2);
   }
   document.getElementById("player1").style.transform = "rotate(0deg)";
   document.getElementById("player2").style.transform = "rotate(180deg)";
@@ -68,10 +85,12 @@ function switchPlayer(player) {
       clearInterval(timer1);
       time1 += increment1;
       timer2 = setInterval(() => countdown(2), 1000);
+      changeColorWatchPlayer(1);
     } else {
       clearInterval(timer2);
       time2 += increment2;
       timer1 = setInterval(() => countdown(1), 1000);
+      changeColorWatchPlayer(2);
     }
     activePlayer = 3 - activePlayer;
   }
@@ -133,6 +152,9 @@ document.getElementById("player1").addEventListener("click", function () {
 document.getElementById("player2").addEventListener("click", function () {
   switchPlayer(2);
 });
+
+document.getElementById("player1").addEventListener("touchstart", () => switchPlayer(1));
+document.getElementById("player2").addEventListener("touchstart", () => switchPlayer(2));
 
 document.addEventListener('DOMContentLoaded', (event) => {
     var time1 = document.getElementById('time1');

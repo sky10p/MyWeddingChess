@@ -94,6 +94,18 @@ button:hover {
   color: #8b0000; 
 }
 
+button:active {
+  background-color: #ffffff; /* Color de fondo normal */
+  color: #8b4513; /* Color de texto normal */
+}
+
+/* Nueva regla para el estado :focus */
+button:focus {
+  background-color: #ffffff;
+  color: #8b4513;
+  outline: none; /* Opcional: para eliminar el borde de enfoque predeterminado */
+}
+
 #clock-view {
   display: flex;
   flex-direction: column;
