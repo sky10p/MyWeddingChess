@@ -26,16 +26,37 @@ function formatTime(seconds) {
 }
 
 changeColorWatchPlayer = (player) => {
+  const player1Button = document.getElementById("player1");
+  const player2Button = document.getElementById("player2");
+  const player1clickButton = document.getElementById("button-player1");
+  const player2clickButton = document.getElementById("button-player2");
+
   if (player === 1) {
-    document.getElementById("player1").style.backgroundColor = "#f0e68c"; 
-    document.getElementById("player2").style.backgroundColor = ""; 
-    document.getElementById("player1").disabled = true;
-    document.getElementById("player2").disabled = false; 
+    player1Button.classList.add("active-player");
+    player1clickButton.classList.add("active-player");
+    player1Button.classList.remove("inactive-player");
+    player1clickButton.classList.remove("inactive-player");
+    player2Button.classList.add("inactive-player");
+    player2clickButton.classList.add("inactive-player");
+    player2Button.classList.remove("active-player");
+    player2clickButton.classList.remove("active-player");
+    player1Button.disabled = true;
+    player2Button.disabled = false;
   } else {
-    document.getElementById("player2").style.backgroundColor = "#f0e68c";
-    document.getElementById("player1").style.backgroundColor = ""; 
-    document.getElementById("player2").disabled = true; 
-    document.getElementById("player1").disabled = false;
+    player2Button.classList.add("active-player");
+    player2clickButton.classList.add("active-player");
+    player2Button.classList.remove("inactive-player");
+    player2clickButton.classList.remove("inactive-player");
+    player1Button.classList.add("inactive-player");
+    player1clickButton.classList.add("inactive-player");
+    player1Button.classList.add("inactive-player");
+    player1clickButton.classList.add("inactive-player");
+    player1Button.classList.remove("active-player");
+    player1clickButton.classList.remove("active-player");
+    player1Button.classList.remove("active-player");
+    player1clickButton.classList.remove("active-player");
+    player2Button.disabled = true;
+    player1Button.disabled = false;
   }
 };
 
