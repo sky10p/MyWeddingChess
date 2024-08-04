@@ -1,148 +1,157 @@
-html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Georgia', serif;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Georgia", serif;
 }
 
-#content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(to bottom, #f7e7ce, #f0c27b); /* Fondo degradado */
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    #f7e7ce,
+    #f0c27b
+  ); /* Fondo degradado */
 }
 
 .view {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .header {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .header h1 {
-    font-size: 3em;
-    margin: 0;
-    color: #8B4513; /* Color marrón */
+  font-size: 3em;
+  margin: 0;
+  color: #8b4513; /* Color marrón */
 }
 
 .header h2 {
-    font-size: 2em;
-    margin: 0;
-    color: #8B0000; /* Color rojo oscuro */
+  font-size: 2em;
+  margin: 0;
+  color: #8b0000; /* Color rojo oscuro */
 }
 
 .setup-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 .setup-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #8B4513;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #8b4513;
 }
 
 select {
-    padding: 5px;
-    border: 2px solid #8B4513;
-    border-radius: 5px;
-    font-size: 1em;
-    text-align: center; /* Centrar el texto horizontalmente */
-    text-align-last: center; /* Centrar el texto del último elemento seleccionado */
+  padding: 5px;
+  border: 2px solid #8b4513;
+  border-radius: 5px;
+  font-size: 1em;
+  text-align: center; /* Centrar el texto horizontalmente */
+  text-align-last: center; /* Centrar el texto del último elemento seleccionado */
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 1em;
-    border: 2px solid #8B4513; /* Color marrón */
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #ffffff;
-    color: #8B4513; /* Color marrón */
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: 2px solid #8b4513; /* Color marrón */
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #8b4513; /* Color marrón */
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 button:hover {
-    background-color: #f0e68c; /* Color dorado claro */
-    color: #8B0000; /* Color rojo oscuro */
+  background-color: #f0e68c; /* Color dorado claro */
+  color: #8b0000; /* Color rojo oscuro */
 }
 
 #clock-view {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    overflow: hidden; /* Evita el desplazamiento */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden; /* Evita el desplazamiento */
 }
 
 .player {
-    flex: 1;
-    text-align: center;
-    padding: 20px;
-    background-color: #ffffff;
-    border: 2px solid #8B4513; /* Color marrón */
-    width: 90%;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 600px;
-    cursor: pointer; /* Indica que el div es pulsable */
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 2px solid #8b4513; /* Color marrón */
+  width: 90%;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  cursor: pointer; /* Indica que el div es pulsable */
 }
 
 #player2 {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .time {
-    font-size: 4em; /* Tamaño de fuente más grande */
-    margin-bottom: 20px;
-    color: #8B4513; /* Color marrón */
+  font-size: 4em; /* Tamaño de fuente más grande */
+  margin-bottom: 20px;
+  color: #8b4513; /* Color marrón */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Standard syntax */
 }
 
 .reset-button {
-    flex: 0.1;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    border-radius: 10px;
-    background-color: #ffffff;
-    color: #8B4513; /* Color marrón */
-    border: 2px solid #8B4513; /* Color marrón */
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    margin-top: 10px; /* Espacio para separar del resto */
+  flex: 0.1;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #8b4513; /* Color marrón */
+  border: 2px solid #8b4513; /* Color marrón */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 10px; /* Espacio para separar del resto */
 }
 
 .reset-button:hover {
-    background-color: #f0e68c; /* Color dorado claro */
-    color: #8B0000; /* Color rojo oscuro */
+  background-color: #f0e68c; /* Color dorado claro */
+  color: #8b0000; /* Color rojo oscuro */
 }
