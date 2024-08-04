@@ -47,14 +47,13 @@ function startGame() {
   document.getElementById("setup-view").style.display = "none";
   document.getElementById("clock-view").style.display = "flex";
 
-  document.getElementById("player1").style.transform = "rotate(0deg)";
-  document.getElementById("player2").style.transform = "rotate(180deg)";
-
   if (document.getElementById("player1-color").value === "black") {
     activePlayer = 2;
   } else {
     activePlayer = 1;
   }
+  document.getElementById("player1").style.transform = "rotate(0deg)";
+  document.getElementById("player2").style.transform = "rotate(180deg)";
   running = true;
   if (activePlayer === 1) {
     timer1 = setInterval(() => countdown(1), 1000);
@@ -74,7 +73,7 @@ function switchPlayer(player) {
       time2 += increment2;
       timer1 = setInterval(() => countdown(1), 1000);
     }
-    activePlayer = 3 - activePlayer; // Cambia de 1 a 2 y de 2 a 1
+    activePlayer = 3 - activePlayer;
   }
 }
 
@@ -102,8 +101,6 @@ function resetClock() {
   activePlayer = 1;
   document.getElementById("setup-view").style.display = "flex";
   document.getElementById("clock-view").style.display = "none";
-  document.getElementById("player1-color").value = "white";
-  document.getElementById("player2-color").value = "black";
   updateDisplay();
 }
 
@@ -127,3 +124,12 @@ document
       document.getElementById("player1-color").value = "white";
     }
   });
+
+// Event listeners for clicking the entire player div
+document.getElementById("player1").addEventListener("click", function () {
+  switchPlayer(1);
+});
+
+document.getElementById("player2").addEventListener("click", function () {
+  switchPlayer(2);
+});
